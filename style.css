@@ -1,0 +1,153 @@
+body{
+    margin: 0px;
+}
+#background{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+#background>video{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+#background::after{
+    content: '';
+    width: inherit;
+    height: inherit;
+    position: fixed;
+    background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
+    inset: 0;
+    
+}
+header{
+    color: white;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.app{
+    max-width: 1440px;
+    padding-top: 24px;
+    display: flex;
+    text-align: center;
+    column-gap: 64px;
+}
+.app>img{
+    width: 70px;
+    height: 50px;
+}
+.navigation{
+    display: flex;
+    column-gap: 48px;
+}
+ul{
+    list-style: none;
+}
+li>a{
+    text-decoration: none;
+    color: white;
+}
+li>a:hover{
+    transition-duration: 1s;
+    color: rgb(201, 0, 0);
+    text-decoration: underline;
+}
+.navigation_social{
+    margin-left: 650px;
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+}
+.navigation_social>svg{
+    width: 20px;
+    height: 20px;
+    opacity: 0.6;
+}
+.navigation_social>svg:hover{
+    opacity: 1;
+    transform: translateY(-5px);
+    transition-duration: 0.5s;
+}
+main{
+    margin: auto;
+    flex: 1;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1440px;
+}
+.main_info{
+    max-width: 570px;
+    text-align: justify;
+}
+.main_info>p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 28px 0 28px;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.main_info>div{
+    display: flex;
+    column-gap: 42px;
+}
+.main_info div a, .main_info div button{
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 3px;
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 0.3px;
+    transform: skew(-10deg);
+}
+.main_info div a{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 300;
+    background-color: rgb(185, 0, 0);
+}
+.main_info div button{
+    color: white;
+    background-color: transparent;
+    border: 1px solid green;
+}
+@media (max-width: 1108px) {
+    body{
+        overflow-x: hidden;
+    }
+    header{
+        overflow-x: hidden;
+        padding-left: 10px;
+    }
+    main{
+        flex-direction: column;
+        margin-top: 60px;
+    }
+    img{
+        width: 300px;
+        
+    }
+    .app{
+        column-gap: 0;
+    }
+    .main_info{
+        text-align: center;
+        padding: 15px;
+    }
+    .main_info>p{
+        text-align: justify;
+        text-indent: 25px;
+    }
+    #especial{
+        width: 50px;
+        height: 30px;
+    }
+    .main_info div a, .main_info div button {
+        width: 45%;
+    }
+
+}
